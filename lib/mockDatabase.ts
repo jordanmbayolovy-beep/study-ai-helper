@@ -7,6 +7,7 @@ export interface User {
   password: string;
   grade: number;
   subscriptionStatus: 'free' | 'pro';
+  isAdmin?: boolean;
   usageStats: {
     questionsUsed: number;
     notesUsed: number;
@@ -46,6 +47,7 @@ export const users: User[] = [
     password: '$2a$10$ZIoozq3pCTaLOPeWXlUJDO2XeNkJhSEqpbFxRfXH8fPrQ2Kx8vhZK', // hashed "admin123"
     grade: 12,
     subscriptionStatus: 'pro',
+    isAdmin: true,
     usageStats: {
       questionsUsed: 0,
       notesUsed: 0,
